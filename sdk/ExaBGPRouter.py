@@ -14,3 +14,12 @@ class ExaBGPRouter(Node):
 
     def __init__(self): 
         pass
+
+    def createContainer(self):
+        """!
+        @brief Create a container for this node
+
+        Use the fixed docker image 
+        """
+        return
+
