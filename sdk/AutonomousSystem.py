@@ -61,22 +61,48 @@ class AutonomousSystem():
         """
         return 
 
-    def createHost(name: str, image: str):
+    def createHost(name: str, start: bool = True) -> Node:
         """!
         @brief create a new host inside the AS, and start it
         """
-        return 
 
-    def createNetwork(name: str, prefix: str):
+        node = Node()
+        node.createContainer()
+        if start:
+           node.start()
+
+        return node 
+
+
+    def createNetwork(name: str, prefix: str) -> Network:
         """!
         @brief create a network inside the AS 
         """
         return 
 
-    def createRouter(name: str, image: str):
+    def createBirdRouter(name: str, start: bool = True) -> BirdRouter:
         """!
-        @brief create a router inside the AS 
+        @brief create a Bird router inside the AS. The base image is fixed.
         """
+
+        router = BirdRouter()
+        router.createContainer()
+
+        if start:
+           node.start()
+        return 
+
+
+    def createExaBGPRouter(name: str, start: bool = True) -> ExaRouter:
+        """!
+        @brief create a ExaBGP router inside the AS. The base image is fixed. 
+        """
+        router = ExaBGPRouter()
+        router.createContainer()
+
+        if start:
+           node.start()
+
         return 
     
     def removeNode(name: str):

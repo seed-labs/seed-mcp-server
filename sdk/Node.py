@@ -14,8 +14,27 @@ class Node():
     __container  # This is the container object returned by the docker API
     __containerName: str   # The corresponding container name
 
+    def __init__(self, image: str):
+        """!
+        @brief Constructor
 
-    def runCommand(cmd: str) -> int: 
+        It only initialize the object; it will not create a container
+        """
+        pass
+
+    def createContainer(self, image: str): 
+        """!
+        @brief Create a container for this node
+        """
+        self.__container = None
+        self.__containerName = ''
+        return self
+
+    def getContainer(self):
+        return __self.container
+
+
+    def runCommand(self, cmd: str) -> int: 
         """!
         @brief Run a command on the node.
 
